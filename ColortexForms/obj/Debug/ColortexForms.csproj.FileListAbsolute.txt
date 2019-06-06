@@ -1,0 +1,14 @@
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\ColortexForms.exe.config
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\ColortexForms.exe
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\ColortexForms.pdb
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\Svg.dll
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\Svg.pdb
+C:\Users\Александр\source\ColortexForms\ColortexForms\bin\Debug\Svg.xml
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.csprojAssemblyReference.cache
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.Main.resources
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.Properties.Resources.resources
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.csproj.GenerateResource.cache
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.csproj.CoreCompileInputs.cache
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.csproj.CopyComplete
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.exe
+C:\Users\Александр\source\ColortexForms\ColortexForms\obj\Debug\ColortexForms.pdb
