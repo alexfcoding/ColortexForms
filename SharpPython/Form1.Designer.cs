@@ -205,7 +205,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Pic2Text";
+            this.Text = "ColortexForms";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureSVGRender)).EndInit();
             this.groupBox1.ResumeLayout(false);
