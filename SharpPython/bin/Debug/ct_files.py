@@ -50,7 +50,7 @@ def get_filenames() -> list:
         Search for local files
     """
     if not os.path.isdir(INPUT_PATH):
-        print (f"Could not find input directory ({INPUT_PATH})! Creating it for you...")
+        print (f'Could not find input directory "{INPUT_PATH}"! Creating it for you...')
 
         try:
             os.mkdir(INPUT_PATH)
