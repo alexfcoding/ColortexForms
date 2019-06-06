@@ -44,6 +44,7 @@ namespace ColortexForms
             }
 
             PictureSVGRender.Image.Save("input/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem));
+
             Thread.Sleep(200);
 
             ExecutePython(pyPath, pyScript);
@@ -72,20 +73,18 @@ namespace ColortexForms
             myProcessStartInfo.Arguments = "main.py";
             Process myProcess = new Process();            
             myProcess.StartInfo = myProcessStartInfo;     
-            myProcess.Start();
-            
+            myProcess.Start();            
         }
 
         private void RenderSVG (string filePath)
         {
             var svgDoc = SvgDocument.Open(filePath);
-
             PictureSVGRender.Image = svgDoc.Draw();
         }
+
         private void BtnDrawSVG_Click(object sender, EventArgs e)
         {
             string svgPath = @"C:\Users\Александр\source\SharpPython\SharpPython\bin\Debug\random_tree_001.svg";
-
             RenderSVG(svgPath);
         }
         
@@ -112,15 +111,19 @@ namespace ColortexForms
             }
 
             return destImage;
-        }
-        private void BtnConvert_Click(object sender, EventArgs e)
-        {
-           
-        }        
+        }      
 
         private void ListChecked_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (var fromFile = Image.FromFile(@"prepare/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem)))
+            {
+                PictureSVGRender.Image = new Bitmap(fromFile);
+            }
+        }
+
+        private void ListProcessImg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var fromFile = Image.FromFile(@"output/" + ListSourceImg.GetItemText(ListProcessImg.SelectedItem)))
             {
                 PictureSVGRender.Image = new Bitmap(fromFile);
             }
@@ -137,35 +140,6 @@ namespace ColortexForms
         private void BtnResize_Click(object sender, EventArgs e)
         {
             PictureSVGRender.Image = ResizeImage(PictureSVGRender.Image, PictureSVGRender.Image.Width / 2, PictureSVGRender.Image.Height / 2);
-        }
-
-        private void BtnPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureSVGRender_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListProcessImg_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (var fromFile = Image.FromFile(@"output/" + ListSourceImg.GetItemText(ListProcessImg.SelectedItem)))
-            {
-                PictureSVGRender.Image = new Bitmap(fromFile);
-            }
-        }
+        }       
     }
 }
-//randomNum = rndNum.Next(0, 255);
-//byte red = Convert.ToByte(randomNum);
-//randomNum = rndNum.Next(0, 255);
-//byte green = Convert.ToByte(randomNum);
-//randomNum = rndNum.Next(0, 255);
-//byte blue = Convert.ToByte(randomNum); ;

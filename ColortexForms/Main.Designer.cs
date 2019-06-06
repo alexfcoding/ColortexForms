@@ -77,8 +77,7 @@
             this.PictureSVGRender.Size = new System.Drawing.Size(1076, 790);
             this.PictureSVGRender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureSVGRender.TabIndex = 2;
-            this.PictureSVGRender.TabStop = false;
-            this.PictureSVGRender.Click += new System.EventHandler(this.PictureSVGRender_Click);
+            this.PictureSVGRender.TabStop = false;            
             // 
             // groupBox1
             // 
@@ -170,8 +169,7 @@
             this.BtnPreview.Size = new System.Drawing.Size(215, 41);
             this.BtnPreview.TabIndex = 11;
             this.BtnPreview.Text = "Preview";
-            this.BtnPreview.UseVisualStyleBackColor = true;
-            this.BtnPreview.Click += new System.EventHandler(this.BtnPreview_Click);
+            this.BtnPreview.UseVisualStyleBackColor = true;            
             // 
             // BtnResize
             // 
@@ -205,8 +203,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "ColortexForms";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "ColortexForms";            
             ((System.ComponentModel.ISupportInitialize)(this.PictureSVGRender)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
