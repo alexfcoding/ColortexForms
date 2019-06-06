@@ -1,0 +1,14 @@
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\PythonWindowsForms.exe.config
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\PythonWindowsForms.exe
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\PythonWindowsForms.pdb
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.csprojAssemblyReference.cache
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.Form1.resources
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.Properties.Resources.resources
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.csproj.GenerateResource.cache
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.exe
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.pdb
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\Svg.dll
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\Svg.pdb
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\bin\Debug\Svg.xml
+C:\Users\Александр\source\repos\PythonWindowsForms\PythonWindowsForms\obj\Debug\PythonWindowsForms.csproj.CopyComplete

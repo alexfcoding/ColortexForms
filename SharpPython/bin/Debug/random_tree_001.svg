@@ -1,0 +1,79 @@
+
+    <svg version="1.1" 
+        width="836pt" 
+        height="930pt" 
+        viewBox="0 0 836 930"
+        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        xmlns="http://www.w3.org/2000/svg">
+        <style> text { font-size: 16px; font-family: Arial,sans-serif; } </style>
+    
+<rect x="0" y="0" width="836" height="930" fill="gray" />
+<path stroke-width="2" d="M418, 90 C418, 190 418, 140 418 240" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="418" cy="165" r="15" fill="#27def4" stroke="black" />
+<text x="418" y="170" fill="black" text-anchor="middle">1</text>
+<rect stroke-width="2" fill-opacity="1.0" x="346" y="240" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="346" y1="265" x2="490" y2="265" stroke="black" />
+<text x="418" y="258" fill="black" text-anchor="middle"><tspan x="418" dy="0">random_tree(x=3)</tspan><tspan x="418" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M418, 290 C418, 390 214, 340 214 440" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="316" cy="365" r="15" fill="#27def4" stroke="black" />
+<text x="316" y="370" fill="black" text-anchor="middle">2</text>
+<rect stroke-width="2" fill-opacity="1.0" x="142" y="440" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="142" y1="465" x2="286" y2="465" stroke="black" />
+<text x="214" y="458" fill="black" text-anchor="middle"><tspan x="214" dy="0">random_tree(x=2)</tspan><tspan x="214" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M214, 490 C214, 590 112, 540 112 640" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="163" cy="565" r="15" fill="#27def4" stroke="black" />
+<text x="163" y="570" fill="black" text-anchor="middle">3</text>
+<rect stroke-width="2" fill-opacity="1.0" x="40" y="640" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="40" y1="665" x2="184" y2="665" stroke="black" />
+<text x="112" y="658" fill="black" text-anchor="middle"><tspan x="112" dy="0">random_tree(x=1)</tspan><tspan x="112" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M112, 690 C112, 790 112, 740 112 840" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="112" cy="765" r="15" fill="#27def4" stroke="black" />
+<text x="112" y="770" fill="black" text-anchor="middle">4</text>
+<rect stroke-width="2" fill-opacity="1.0" x="40" y="840" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="40" y1="865" x2="184" y2="865" stroke="black" />
+<text x="112" y="858" fill="black" text-anchor="middle"><tspan x="112" dy="0">random_tree(x=0)</tspan><tspan x="112" dy="1.5em">Dead end</tspan></text>
+<path stroke-width="2" d="M214, 490 C214, 590 316, 540 316 640" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="265" cy="565" r="15" fill="#27def4" stroke="black" />
+<text x="265" y="570" fill="black" text-anchor="middle">5</text>
+<rect stroke-width="2" fill-opacity="1.0" x="244" y="640" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="244" y1="665" x2="388" y2="665" stroke="black" />
+<text x="316" y="658" fill="black" text-anchor="middle"><tspan x="316" dy="0">random_tree(x=1)</tspan><tspan x="316" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M316, 690 C316, 790 316, 740 316 840" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="316" cy="765" r="15" fill="#27def4" stroke="black" />
+<text x="316" y="770" fill="black" text-anchor="middle">6</text>
+<rect stroke-width="2" fill-opacity="1.0" x="244" y="840" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="244" y1="865" x2="388" y2="865" stroke="black" />
+<text x="316" y="858" fill="black" text-anchor="middle"><tspan x="316" dy="0">random_tree(x=0)</tspan><tspan x="316" dy="1.5em">Dead end</tspan></text>
+<path stroke-width="2" d="M418, 290 C418, 390 622, 340 622 440" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="520" cy="365" r="15" fill="#27def4" stroke="black" />
+<text x="520" y="370" fill="black" text-anchor="middle">7</text>
+<rect stroke-width="2" fill-opacity="1.0" x="550" y="440" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="550" y1="465" x2="694" y2="465" stroke="black" />
+<text x="622" y="458" fill="black" text-anchor="middle"><tspan x="622" dy="0">random_tree(x=2)</tspan><tspan x="622" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M622, 490 C622, 590 520, 540 520 640" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="571" cy="565" r="15" fill="#27def4" stroke="black" />
+<text x="571" y="570" fill="black" text-anchor="middle">8</text>
+<rect stroke-width="2" fill-opacity="1.0" x="448" y="640" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="448" y1="665" x2="592" y2="665" stroke="black" />
+<text x="520" y="658" fill="black" text-anchor="middle"><tspan x="520" dy="0">random_tree(x=1)</tspan><tspan x="520" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M520, 690 C520, 790 520, 740 520 840" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="520" cy="765" r="15" fill="#27def4" stroke="black" />
+<text x="520" y="770" fill="black" text-anchor="middle">9</text>
+<rect stroke-width="2" fill-opacity="1.0" x="448" y="840" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="448" y1="865" x2="592" y2="865" stroke="black" />
+<text x="520" y="858" fill="black" text-anchor="middle"><tspan x="520" dy="0">random_tree(x=0)</tspan><tspan x="520" dy="1.5em">Dead end</tspan></text>
+<path stroke-width="2" d="M622, 490 C622, 590 724, 540 724 640" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="673" cy="565" r="15" fill="#27def4" stroke="black" />
+<text x="673" y="570" fill="black" text-anchor="middle">10</text>
+<rect stroke-width="2" fill-opacity="1.0" x="652" y="640" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="652" y1="665" x2="796" y2="665" stroke="black" />
+<text x="724" y="658" fill="black" text-anchor="middle"><tspan x="724" dy="0">random_tree(x=1)</tspan><tspan x="724" dy="1.5em">None</tspan></text>
+<path stroke-width="2" d="M724, 690 C724, 790 724, 740 724 840" fill="transparent" stroke="black" />
+<circle stroke-width="2" cx="724" cy="765" r="15" fill="#27def4" stroke="black" />
+<text x="724" y="770" fill="black" text-anchor="middle">11</text>
+<rect stroke-width="2" fill-opacity="1.0" x="652" y="840" width="144" rx="5" height="50" fill="#27def4" stroke="black" />
+<line stroke-width="2" x1="652" y1="865" x2="796" y2="865" stroke="black" />
+<text x="724" y="858" fill="black" text-anchor="middle"><tspan x="724" dy="0">random_tree(x=0)</tspan><tspan x="724" dy="1.5em">Dead end</tspan></text>
+<rect stroke-width="2" fill-opacity="1.0" x="393" y="40" width="50" rx="5" height="50" fill="#27def4" stroke="black" />
+<text x="418" y="70" fill="black" text-anchor="middle">Main</text>
+</svg>
