@@ -16,12 +16,11 @@ def main():
     Main flow
     """
     print('--- Colortex image conversion script ---')
-
     total_converted = 0
     local_files = ct_files.get_filenames()
 
     if not local_files:
-        print('Nothing to convert')
+        print('Nothing to convert')        
         return
 
     for i, file_dict in enumerate(local_files, start=1):

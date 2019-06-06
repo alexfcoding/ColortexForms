@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Svg;
-
+using System.IO;
 
 namespace SharpPython
 {
@@ -18,24 +18,49 @@ namespace SharpPython
         public Form1()
         {
             InitializeComponent();
+
+            List<String> FileExtensions = new List<string>();
+
+            FileExtensions.Add("*.png");
+            FileExtensions.Add("*.jpg");
+
+            FillListBox(ListPicture, @"input", FileExtensions);
         }
 
         private void BtnRunPython_Click(object sender, EventArgs e)
         {
-            string pyPath = @"C:\Users\Александр\AppData\Local\Programs\Python\Python37\python.exe";
+            string pyPath = @"C:\Users\Александр\AppData\Local\Programs\Python\Python37-32\python.exe";
             string pyScript = @"C:\Users\Александр\source\SharpPython\SharpPython\bin\Debug\main.py";
 
+            
             ExecutePython(pyPath, pyScript);
+        }
+        
+        private void FillListBox(ListBox inputListbox, string Folder, List <string> FileExtensions)
+        {
+            DirectoryInfo dirInfo = new DirectoryInfo(Folder);
+
+            for (int i = 0; i < FileExtensions.Count; i++)
+            {
+                FileInfo[] Files = dirInfo.GetFiles(FileExtensions[i]);
+
+                foreach (FileInfo file in Files)
+                {
+                    inputListbox.Items.Add(file.Name);
+                }
+            }            
         }
 
         private void ExecutePython (string pythonPath, string scriptName)
-        {
-            Process p = new Process();
-            p.StartInfo.FileName = pythonPath;
-            p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.Arguments = scriptName;                    
-            p.Start();
+        {           
+            ProcessStartInfo myProcessStartInfo = new ProcessStartInfo(pythonPath);
+            myProcessStartInfo.UseShellExecute = false;
+            myProcessStartInfo.RedirectStandardOutput = true;                        
+            myProcessStartInfo.Arguments = "main.py";
+            Process myProcess = new Process();            
+            myProcess.StartInfo = myProcessStartInfo;     
+            myProcess.Start();
+            
         }
 
         private void RenderSVG (string filePath)
@@ -54,9 +79,16 @@ namespace SharpPython
         private void BtnConvert_Click(object sender, EventArgs e)
         {
            
-        }       
+        }
 
-        
+        private void ListPicture_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var fromFile = Image.FromFile(@"input/" + ListPicture.GetItemText(ListPicture.SelectedItem)))
+            {
+                PictureSVGRender.Image = new Bitmap(fromFile);
+            }
+            
+        }
     }
 }
 //randomNum = rndNum.Next(0, 255);
