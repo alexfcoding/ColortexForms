@@ -23,7 +23,7 @@ namespace SharpPython
         private void BtnRunPython_Click(object sender, EventArgs e)
         {
             string pyPath = @"C:\Users\Александр\AppData\Local\Programs\Python\Python37\python.exe";
-            string pyScript = @"main.py";
+            string pyScript = @"C:\Users\Александр\source\SharpPython\SharpPython\bin\Debug\main.py";
 
             ExecutePython(pyPath, pyScript);
         }

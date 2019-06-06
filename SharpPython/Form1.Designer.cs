@@ -248,10 +248,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 836);
+            this.Controls.Add(this.PictureSVGRender);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BtnRunPython);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.PictureSVGRender);
             this.Controls.Add(this.BtnDrawSVG);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
