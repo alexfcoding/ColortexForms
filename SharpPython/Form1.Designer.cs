@@ -38,16 +38,16 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListPicture = new System.Windows.Forms.ListBox();
+            this.ListChecked = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureSVGRender)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnRunPython
             // 
-            this.BtnRunPython.Location = new System.Drawing.Point(259, 791);
+            this.BtnRunPython.Location = new System.Drawing.Point(12, 783);
             this.BtnRunPython.Name = "BtnRunPython";
-            this.BtnRunPython.Size = new System.Drawing.Size(147, 41);
+            this.BtnRunPython.Size = new System.Drawing.Size(108, 41);
             this.BtnRunPython.TabIndex = 0;
             this.BtnRunPython.Text = "RunPython";
             this.BtnRunPython.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // BtnDrawSVG
             // 
-            this.BtnDrawSVG.Location = new System.Drawing.Point(412, 791);
+            this.BtnDrawSVG.Location = new System.Drawing.Point(131, 783);
             this.BtnDrawSVG.Name = "BtnDrawSVG";
-            this.BtnDrawSVG.Size = new System.Drawing.Size(147, 41);
+            this.BtnDrawSVG.Size = new System.Drawing.Size(108, 41);
             this.BtnDrawSVG.TabIndex = 1;
             this.BtnDrawSVG.Text = "DrawSVG";
             this.BtnDrawSVG.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.PictureSVGRender.Location = new System.Drawing.Point(259, 31);
             this.PictureSVGRender.Name = "PictureSVGRender";
-            this.PictureSVGRender.Size = new System.Drawing.Size(1047, 737);
+            this.PictureSVGRender.Size = new System.Drawing.Size(1047, 793);
             this.PictureSVGRender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureSVGRender.TabIndex = 2;
             this.PictureSVGRender.TabStop = false;
@@ -126,22 +126,22 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
-            // ListPicture
+            // ListChecked
             // 
-            this.ListPicture.FormattingEnabled = true;
-            this.ListPicture.Location = new System.Drawing.Point(12, 127);
-            this.ListPicture.Name = "ListPicture";
-            this.ListPicture.Size = new System.Drawing.Size(227, 641);
-            this.ListPicture.TabIndex = 8;
-            this.ListPicture.SelectedIndexChanged += new System.EventHandler(this.ListPicture_SelectedIndexChanged);
+            this.ListChecked.FormattingEnabled = true;
+            this.ListChecked.Location = new System.Drawing.Point(12, 118);
+            this.ListChecked.Name = "ListChecked";
+            this.ListChecked.Size = new System.Drawing.Size(227, 649);
+            this.ListChecked.TabIndex = 9;
+            this.ListChecked.SelectedIndexChanged += new System.EventHandler(this.ListChecked_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 836);
+            this.Controls.Add(this.ListChecked);
             this.Controls.Add(this.PictureSVGRender);
-            this.Controls.Add(this.ListPicture);
             this.Controls.Add(this.BtnRunPython);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnDrawSVG);
@@ -169,7 +169,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ListBox ListPicture;
+        public System.Windows.Forms.CheckedListBox ListChecked;
     }
 }
 

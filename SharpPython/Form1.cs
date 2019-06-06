@@ -24,7 +24,7 @@ namespace SharpPython
             FileExtensions.Add("*.png");
             FileExtensions.Add("*.jpg");
 
-            FillListBox(ListPicture, @"input", FileExtensions);
+            FillListBox(ListChecked, @"input", FileExtensions);
         }
 
         private void BtnRunPython_Click(object sender, EventArgs e)
@@ -79,15 +79,14 @@ namespace SharpPython
         private void BtnConvert_Click(object sender, EventArgs e)
         {
            
-        }
+        }        
 
-        private void ListPicture_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListChecked_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var fromFile = Image.FromFile(@"input/" + ListPicture.GetItemText(ListPicture.SelectedItem)))
+            using (var fromFile = Image.FromFile(@"input/" + ListChecked.GetItemText(ListChecked.SelectedItem)))
             {
                 PictureSVGRender.Image = new Bitmap(fromFile);
             }
-            
         }
     }
 }
