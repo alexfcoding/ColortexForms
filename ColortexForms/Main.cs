@@ -15,15 +15,16 @@ using System.Drawing.Drawing2D;
 using System.Threading;
 
 namespace ColortexForms
-{
+{       
     public partial class Main : Form
     {
         List<String> FileExtensions = new List<string>();
-
+                
         public Main()
         {
             InitializeComponent();
-
+            
+            watchFiles();
             
             pythonPath.Text = LoadConfig(pythonPath)[0];
 
@@ -31,6 +32,8 @@ namespace ColortexForms
             FileExtensions.Add("*.jpg");
 
             FillListBox(ListSourceImg, @"prepare", FileExtensions);
+
+            FillListBox(ListProcessImg, @"output", FileExtensions);
         }
 
         private string[] LoadConfig(TextBox pythonPath)
@@ -53,6 +56,39 @@ namespace ColortexForms
             return configLines;
         }
 
+        public void OnNewFilesFound(object source, FileSystemEventArgs e)
+        {
+            refreshList();
+        }
+
+        public void refreshList()
+        {
+            ListSourceImg.Items.Clear();
+            FillListBox(ListSourceImg, @"prepare", FileExtensions);
+
+            ListProcessImg.Items.Clear();
+            FillListBox(ListProcessImg, @"output", FileExtensions);
+        }
+
+        private void watchFiles()
+        {
+            FileSystemWatcher watcherInput = new FileSystemWatcher();
+            watcherInput.SynchronizingObject = this;
+            watcherInput.Path = @"prepare";
+            watcherInput.NotifyFilter = NotifyFilters.LastWrite;
+            watcherInput.Filter = "*.*";
+            watcherInput.Changed += new FileSystemEventHandler(OnNewFilesFound);
+            watcherInput.EnableRaisingEvents = true;
+
+            FileSystemWatcher watcherOutput = new FileSystemWatcher();
+            watcherOutput.SynchronizingObject = this;
+            watcherOutput.Path = @"output";
+            watcherOutput.NotifyFilter = NotifyFilters.LastWrite;
+            watcherOutput.Filter = "*.*";
+            watcherOutput.Changed += new FileSystemEventHandler(OnNewFilesFound);
+            watcherOutput.EnableRaisingEvents = true;            
+        }
+
         private void BtnRunPython_Click(object sender, EventArgs e)
         {
             string pyPath = pythonPath.Text;
@@ -65,11 +101,12 @@ namespace ColortexForms
                 file.Delete();
             }
 
-            PictureRenderer.Image.Save("input/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem));
-
-            Thread.Sleep(200);
-
-            ExecutePython(pyPath, pyScript);
+            if (ListSourceImg.SelectedItem != null)
+            {                
+                PictureRenderer.Image.Save("input/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem));
+                Thread.Sleep(200);
+                ExecutePython(pyPath, pyScript);
+            }
         }
         
         private void FillListBox(ListBox inputListbox, string Folder, List <string> FileExtensions)
@@ -124,19 +161,22 @@ namespace ColortexForms
         }      
 
         private void ListChecked_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (var fromFile = Image.FromFile(@"prepare/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem)))
-            {
-                PictureRenderer.Image = new Bitmap(fromFile);
-            }
+        {           
+            if (ListSourceImg.SelectedItem != null)
+                using (var fromFile = Image.FromFile(@"prepare/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem)))
+                {
+                    PictureRenderer.Image = new Bitmap(fromFile);
+                }              
         }
 
         private void ListProcessImg_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var fromFile = Image.FromFile(@"output/" + ListSourceImg.GetItemText(ListProcessImg.SelectedItem)))
-            {
-                PictureRenderer.Image = new Bitmap(fromFile);
-            }
+            
+            if (ListProcessImg.SelectedItem != null)
+                using (var fromFile = Image.FromFile(@"output/" + ListProcessImg.GetItemText(ListProcessImg.SelectedItem)))
+                {
+                    PictureRenderer.Image = new Bitmap(fromFile);
+                }
         }
 
         private void BtnRefresh_Click(object sender, EventArgs e)
@@ -158,6 +198,16 @@ namespace ColortexForms
             System.IO.StreamWriter configFile = new System.IO.StreamWriter(sPath);
             configFile.Write(pythonPath.Text);
             configFile.Close();
+        }
+
+        private void ListSourceImg_MouseClick(object sender, MouseEventArgs e)
+        {
+            BtnRunPython.Enabled = true;
+        }
+
+        private void ListProcessImg_MouseClick(object sender, MouseEventArgs e)
+        {
+            BtnRunPython.Enabled = false;
         }
     }
 }

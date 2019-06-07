@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnRunPython = new System.Windows.Forms.Button();
             this.PictureRenderer = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -35,9 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ListProcessImg = new System.Windows.Forms.CheckedListBox();
             this.BtnResize = new System.Windows.Forms.Button();
-            this.BtnPreview = new System.Windows.Forms.Button();
             this.ListSourceImg = new System.Windows.Forms.CheckedListBox();
-            this.BtnRefresh = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.pythonPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSavePath = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureRenderer)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -55,7 +55,7 @@
             // BtnRunPython
             // 
             this.BtnRunPython.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnRunPython.Location = new System.Drawing.Point(6, 699);
+            this.BtnRunPython.Location = new System.Drawing.Point(6, 703);
             this.BtnRunPython.Name = "BtnRunPython";
             this.BtnRunPython.Size = new System.Drawing.Size(101, 88);
             this.BtnRunPython.TabIndex = 0;
@@ -80,9 +80,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.ListProcessImg);
             this.groupBox1.Controls.Add(this.BtnResize);
-            this.groupBox1.Controls.Add(this.BtnPreview);
             this.groupBox1.Controls.Add(this.ListSourceImg);
-            this.groupBox1.Controls.Add(this.BtnRefresh);
             this.groupBox1.Controls.Add(this.BtnRunPython);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
@@ -93,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 341);
+            this.label3.Location = new System.Drawing.Point(6, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 15;
@@ -102,7 +100,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(6, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 14;
@@ -112,55 +110,36 @@
             // 
             this.ListProcessImg.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListProcessImg.FormattingEnabled = true;
-            this.ListProcessImg.Location = new System.Drawing.Point(6, 357);
-            this.ListProcessImg.MultiColumn = true;
+            this.ListProcessImg.Location = new System.Drawing.Point(6, 378);
             this.ListProcessImg.Name = "ListProcessImg";
             this.ListProcessImg.ScrollAlwaysVisible = true;
-            this.ListProcessImg.Size = new System.Drawing.Size(215, 289);
+            this.ListProcessImg.Size = new System.Drawing.Size(215, 319);
             this.ListProcessImg.TabIndex = 13;
+            this.ListProcessImg.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListProcessImg_MouseClick);
             this.ListProcessImg.SelectedIndexChanged += new System.EventHandler(this.ListProcessImg_SelectedIndexChanged);
             // 
             // BtnResize
             // 
             this.BtnResize.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.BtnResize.Location = new System.Drawing.Point(113, 746);
+            this.BtnResize.Location = new System.Drawing.Point(113, 703);
             this.BtnResize.Name = "BtnResize";
-            this.BtnResize.Size = new System.Drawing.Size(108, 41);
+            this.BtnResize.Size = new System.Drawing.Size(108, 88);
             this.BtnResize.TabIndex = 12;
             this.BtnResize.Text = "Resize";
             this.BtnResize.UseVisualStyleBackColor = true;
             this.BtnResize.Click += new System.EventHandler(this.BtnResize_Click);
             // 
-            // BtnPreview
-            // 
-            this.BtnPreview.Location = new System.Drawing.Point(6, 652);
-            this.BtnPreview.Name = "BtnPreview";
-            this.BtnPreview.Size = new System.Drawing.Size(215, 41);
-            this.BtnPreview.TabIndex = 11;
-            this.BtnPreview.Text = "Preview";
-            this.BtnPreview.UseVisualStyleBackColor = true;
-            // 
             // ListSourceImg
             // 
             this.ListSourceImg.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ListSourceImg.Location = new System.Drawing.Point(6, 35);
-            this.ListSourceImg.MultiColumn = true;
+            this.ListSourceImg.Location = new System.Drawing.Point(6, 28);
             this.ListSourceImg.Name = "ListSourceImg";
             this.ListSourceImg.ScrollAlwaysVisible = true;
-            this.ListSourceImg.Size = new System.Drawing.Size(215, 289);
+            this.ListSourceImg.Size = new System.Drawing.Size(215, 319);
             this.ListSourceImg.TabIndex = 10;
             this.ListSourceImg.UseCompatibleTextRendering = true;
+            this.ListSourceImg.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListSourceImg_MouseClick);
             this.ListSourceImg.SelectedIndexChanged += new System.EventHandler(this.ListChecked_SelectedIndexChanged);
-            // 
-            // BtnRefresh
-            // 
-            this.BtnRefresh.Location = new System.Drawing.Point(113, 699);
-            this.BtnRefresh.Name = "BtnRefresh";
-            this.BtnRefresh.Size = new System.Drawing.Size(108, 41);
-            this.BtnRefresh.TabIndex = 10;
-            this.BtnRefresh.Text = "Refresh";
-            this.BtnRefresh.UseVisualStyleBackColor = true;
-            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // menuStrip1
             // 
@@ -234,6 +213,11 @@
             this.btnSavePath.UseVisualStyleBackColor = true;
             this.btnSavePath.Click += new System.EventHandler(this.btnSavePath_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 300;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,9 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.Button BtnRefresh;
         public System.Windows.Forms.CheckedListBox ListSourceImg;
-        private System.Windows.Forms.Button BtnPreview;
         private System.Windows.Forms.Button BtnResize;
         public System.Windows.Forms.CheckedListBox ListProcessImg;
         private System.Windows.Forms.TextBox pythonPath;
@@ -279,6 +261,7 @@
         private System.Windows.Forms.Button btnSavePath;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
