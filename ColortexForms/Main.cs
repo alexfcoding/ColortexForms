@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Svg;
 using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -43,7 +42,7 @@ namespace ColortexForms
                 file.Delete();
             }
 
-            PictureSVGRender.Image.Save("input/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem));
+            PictureRenderer.Image.Save("input/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem));
 
             Thread.Sleep(200);
 
@@ -74,19 +73,7 @@ namespace ColortexForms
             Process myProcess = new Process();            
             myProcess.StartInfo = myProcessStartInfo;     
             myProcess.Start();            
-        }
-
-        private void RenderSVG (string filePath)
-        {
-            var svgDoc = SvgDocument.Open(filePath);
-            PictureSVGRender.Image = svgDoc.Draw();
-        }
-
-        private void BtnDrawSVG_Click(object sender, EventArgs e)
-        {
-            string svgPath = @"C:\Users\Александр\source\SharpPython\SharpPython\bin\Debug\random_tree_001.svg";
-            RenderSVG(svgPath);
-        }
+        }               
         
         public static Bitmap ResizeImage(Image image, int width, int height)
         {
@@ -117,7 +104,7 @@ namespace ColortexForms
         {
             using (var fromFile = Image.FromFile(@"prepare/" + ListSourceImg.GetItemText(ListSourceImg.SelectedItem)))
             {
-                PictureSVGRender.Image = new Bitmap(fromFile);
+                PictureRenderer.Image = new Bitmap(fromFile);
             }
         }
 
@@ -125,7 +112,7 @@ namespace ColortexForms
         {
             using (var fromFile = Image.FromFile(@"output/" + ListSourceImg.GetItemText(ListProcessImg.SelectedItem)))
             {
-                PictureSVGRender.Image = new Bitmap(fromFile);
+                PictureRenderer.Image = new Bitmap(fromFile);
             }
         }
 
@@ -139,7 +126,7 @@ namespace ColortexForms
 
         private void BtnResize_Click(object sender, EventArgs e)
         {
-            PictureSVGRender.Image = ResizeImage(PictureSVGRender.Image, PictureSVGRender.Image.Width / 2, PictureSVGRender.Image.Height / 2);
+            PictureRenderer.Image = ResizeImage(PictureRenderer.Image, PictureRenderer.Image.Width / 2, PictureRenderer.Image.Height / 2);
         }       
     }
 }
