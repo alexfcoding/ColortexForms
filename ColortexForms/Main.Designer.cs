@@ -42,6 +42,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pythonPath = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSavePath = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureRenderer)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -49,9 +54,10 @@
             // 
             // BtnRunPython
             // 
+            this.BtnRunPython.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnRunPython.Location = new System.Drawing.Point(6, 699);
             this.BtnRunPython.Name = "BtnRunPython";
-            this.BtnRunPython.Size = new System.Drawing.Size(101, 41);
+            this.BtnRunPython.Size = new System.Drawing.Size(101, 88);
             this.BtnRunPython.TabIndex = 0;
             this.BtnRunPython.Text = "Convert selected";
             this.BtnRunPython.UseVisualStyleBackColor = true;
@@ -61,15 +67,17 @@
             // 
             this.PictureRenderer.BackColor = System.Drawing.SystemColors.HighlightText;
             this.PictureRenderer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureRenderer.Location = new System.Drawing.Point(245, 33);
+            this.PictureRenderer.Location = new System.Drawing.Point(245, 61);
             this.PictureRenderer.Name = "PictureRenderer";
-            this.PictureRenderer.Size = new System.Drawing.Size(1076, 790);
+            this.PictureRenderer.Size = new System.Drawing.Size(1076, 762);
             this.PictureRenderer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureRenderer.TabIndex = 2;
             this.PictureRenderer.TabStop = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.ListProcessImg);
             this.groupBox1.Controls.Add(this.BtnResize);
             this.groupBox1.Controls.Add(this.BtnPreview);
@@ -81,25 +89,24 @@
             this.groupBox1.Size = new System.Drawing.Size(227, 797);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Settings";
             // 
             // ListProcessImg
             // 
             this.ListProcessImg.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListProcessImg.FormattingEnabled = true;
-            this.ListProcessImg.Location = new System.Drawing.Point(6, 343);
+            this.ListProcessImg.Location = new System.Drawing.Point(6, 357);
             this.ListProcessImg.MultiColumn = true;
             this.ListProcessImg.Name = "ListProcessImg";
             this.ListProcessImg.ScrollAlwaysVisible = true;
-            this.ListProcessImg.Size = new System.Drawing.Size(215, 304);
+            this.ListProcessImg.Size = new System.Drawing.Size(215, 289);
             this.ListProcessImg.TabIndex = 13;
             this.ListProcessImg.SelectedIndexChanged += new System.EventHandler(this.ListProcessImg_SelectedIndexChanged);
             // 
             // BtnResize
             // 
-            this.BtnResize.Location = new System.Drawing.Point(6, 746);
+            this.BtnResize.Location = new System.Drawing.Point(113, 699);
             this.BtnResize.Name = "BtnResize";
-            this.BtnResize.Size = new System.Drawing.Size(101, 41);
+            this.BtnResize.Size = new System.Drawing.Size(108, 41);
             this.BtnResize.TabIndex = 12;
             this.BtnResize.Text = "Resize";
             this.BtnResize.UseVisualStyleBackColor = true;
@@ -117,20 +124,20 @@
             // ListSourceImg
             // 
             this.ListSourceImg.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ListSourceImg.Location = new System.Drawing.Point(6, 33);
+            this.ListSourceImg.Location = new System.Drawing.Point(6, 35);
             this.ListSourceImg.MultiColumn = true;
             this.ListSourceImg.Name = "ListSourceImg";
             this.ListSourceImg.ScrollAlwaysVisible = true;
-            this.ListSourceImg.Size = new System.Drawing.Size(215, 304);
+            this.ListSourceImg.Size = new System.Drawing.Size(215, 289);
             this.ListSourceImg.TabIndex = 10;
             this.ListSourceImg.UseCompatibleTextRendering = true;
             this.ListSourceImg.SelectedIndexChanged += new System.EventHandler(this.ListChecked_SelectedIndexChanged);
             // 
             // BtnRefresh
             // 
-            this.BtnRefresh.Location = new System.Drawing.Point(120, 699);
+            this.BtnRefresh.Location = new System.Drawing.Point(113, 746);
             this.BtnRefresh.Name = "BtnRefresh";
-            this.BtnRefresh.Size = new System.Drawing.Size(101, 41);
+            this.BtnRefresh.Size = new System.Drawing.Size(108, 41);
             this.BtnRefresh.TabIndex = 10;
             this.BtnRefresh.Text = "Refresh";
             this.BtnRefresh.UseVisualStyleBackColor = true;
@@ -181,11 +188,59 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
+            // pythonPath
+            // 
+            this.pythonPath.Location = new System.Drawing.Point(318, 31);
+            this.pythonPath.Name = "pythonPath";
+            this.pythonPath.Size = new System.Drawing.Size(405, 20);
+            this.pythonPath.TabIndex = 14;
+            this.pythonPath.Text = "C:\\Users\\Александр\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(245, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Python path:";
+            // 
+            // btnSavePath
+            // 
+            this.btnSavePath.Location = new System.Drawing.Point(729, 30);
+            this.btnSavePath.Name = "btnSavePath";
+            this.btnSavePath.Size = new System.Drawing.Size(98, 22);
+            this.btnSavePath.TabIndex = 16;
+            this.btnSavePath.Text = "Save config";
+            this.btnSavePath.UseVisualStyleBackColor = true;
+            this.btnSavePath.Click += new System.EventHandler(this.btnSavePath_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Source images:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 341);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Processed images:";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 836);
+            this.Controls.Add(this.btnSavePath);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pythonPath);
             this.Controls.Add(this.PictureRenderer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -194,6 +249,7 @@
             this.Text = "ColortexForms";
             ((System.ComponentModel.ISupportInitialize)(this.PictureRenderer)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -217,6 +273,11 @@
         private System.Windows.Forms.Button BtnPreview;
         private System.Windows.Forms.Button BtnResize;
         public System.Windows.Forms.CheckedListBox ListProcessImg;
+        private System.Windows.Forms.TextBox pythonPath;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSavePath;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

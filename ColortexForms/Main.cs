@@ -22,7 +22,10 @@ namespace ColortexForms
 
         public Main()
         {
-            InitializeComponent();                        
+            InitializeComponent();
+
+            
+            pythonPath.Text = LoadConfig(pythonPath)[0];
 
             FileExtensions.Add("*.png");
             FileExtensions.Add("*.jpg");
@@ -30,10 +33,30 @@ namespace ColortexForms
             FillListBox(ListSourceImg, @"prepare", FileExtensions);
         }
 
+        private string[] LoadConfig(TextBox pythonPath)
+        {
+            string path = @"Config.txt";
+
+            string[] configLines;
+            var list = new List<string>();
+            var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                string line;
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    list.Add(line);
+                }
+            }
+            configLines = list.ToArray();
+            return configLines;
+        }
+
         private void BtnRunPython_Click(object sender, EventArgs e)
         {
-            string pyPath = @"C:\Users\Александр\AppData\Local\Programs\Python\Python37-32\python.exe";
-            string pyScript = @"C:\Users\Александр\source\SharpPython\SharpPython\bin\Debug\main.py";
+            string pyPath = pythonPath.Text;
+            string pyScript = @"main.py";
 
             System.IO.DirectoryInfo di = new DirectoryInfo("input");
 
@@ -127,6 +150,14 @@ namespace ColortexForms
         private void BtnResize_Click(object sender, EventArgs e)
         {
             PictureRenderer.Image = ResizeImage(PictureRenderer.Image, PictureRenderer.Image.Width / 2, PictureRenderer.Image.Height / 2);
-        }       
+        }
+
+        private void btnSavePath_Click(object sender, EventArgs e)
+        {
+            string sPath = "Config.txt";
+            System.IO.StreamWriter configFile = new System.IO.StreamWriter(sPath);
+            configFile.Write(pythonPath.Text);
+            configFile.Close();
+        }
     }
 }
