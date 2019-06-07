@@ -35,7 +35,7 @@ namespace ColortexForms
 
         private string[] LoadConfig(TextBox pythonPath)
         {
-            string path = @"Config.txt";
+            string path = @"config.txt";
 
             string[] configLines;
             var list = new List<string>();
@@ -154,7 +154,7 @@ namespace ColortexForms
 
         private void btnSavePath_Click(object sender, EventArgs e)
         {
-            string sPath = "Config.txt";
+            string sPath = "config.txt";
             System.IO.StreamWriter configFile = new System.IO.StreamWriter(sPath);
             configFile.Write(pythonPath.Text);
             configFile.Close();
