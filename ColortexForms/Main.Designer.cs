@@ -31,6 +31,8 @@
             this.BtnRunPython = new System.Windows.Forms.Button();
             this.PictureRenderer = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.ListProcessImg = new System.Windows.Forms.CheckedListBox();
             this.BtnResize = new System.Windows.Forms.Button();
             this.BtnPreview = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.pythonPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSavePath = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureRenderer)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -90,6 +90,24 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 341);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Processed images:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Source images:";
+            // 
             // ListProcessImg
             // 
             this.ListProcessImg.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -104,7 +122,8 @@
             // 
             // BtnResize
             // 
-            this.BtnResize.Location = new System.Drawing.Point(113, 699);
+            this.BtnResize.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.BtnResize.Location = new System.Drawing.Point(113, 746);
             this.BtnResize.Name = "BtnResize";
             this.BtnResize.Size = new System.Drawing.Size(108, 41);
             this.BtnResize.TabIndex = 12;
@@ -135,7 +154,7 @@
             // 
             // BtnRefresh
             // 
-            this.BtnRefresh.Location = new System.Drawing.Point(113, 746);
+            this.BtnRefresh.Location = new System.Drawing.Point(113, 699);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(108, 41);
             this.BtnRefresh.TabIndex = 10;
@@ -214,24 +233,6 @@
             this.btnSavePath.Text = "Save config";
             this.btnSavePath.UseVisualStyleBackColor = true;
             this.btnSavePath.Click += new System.EventHandler(this.btnSavePath_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Source images:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 341);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Processed images:";
             // 
             // Main
             // 
