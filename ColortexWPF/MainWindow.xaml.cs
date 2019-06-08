@@ -23,11 +23,13 @@ namespace ColortexWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<String> FileExtensions = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
 
-            List<String> FileExtensions = new List<string>();
+            
             watchFiles();
 
             FileExtensions.Add("*.png");
@@ -42,21 +44,35 @@ namespace ColortexWPF
 
         private void watchFiles()
         {
-            //FileSystemWatcher watcherInput = new FileSystemWatcher();
-            //watcherInput.SynchronizingObject = this;
-            //watcherInput.Path = @"prepare";
-            //watcherInput.NotifyFilter = NotifyFilters.LastWrite;
-            //watcherInput.Filter = "*.*";
-            //watcherInput.Changed += new FileSystemEventHandler(OnNewFilesFound);
-            //watcherInput.EnableRaisingEvents = true;
+            FileSystemWatcher watcherInput = new FileSystemWatcher();
+            
+            watcherInput.Path = @"prepare";
+            watcherInput.NotifyFilter = NotifyFilters.LastWrite;
+            watcherInput.Filter = "*.*";
+            watcherInput.Changed += new FileSystemEventHandler(OnNewFilesFound);
+            watcherInput.EnableRaisingEvents = true;
 
-            //FileSystemWatcher watcherOutput = new FileSystemWatcher();
-            //watcherOutput.SynchronizingObject = this;
-            //watcherOutput.Path = @"output";
-            //watcherOutput.NotifyFilter = NotifyFilters.LastWrite;
-            //watcherOutput.Filter = "*.*";
-            //watcherOutput.Changed += new FileSystemEventHandler(OnNewFilesFound);
-            //watcherOutput.EnableRaisingEvents = true;
+            FileSystemWatcher watcherOutput = new FileSystemWatcher();
+            
+            watcherOutput.Path = @"output";
+            watcherOutput.NotifyFilter = NotifyFilters.LastWrite;
+            watcherOutput.Filter = "*.*";
+            watcherOutput.Changed += new FileSystemEventHandler(OnNewFilesFound);
+            watcherOutput.EnableRaisingEvents = true;
+        }
+
+        public void OnNewFilesFound(object source, FileSystemEventArgs e)
+        {
+            Dispatcher.BeginInvoke(new Action(() => refreshList()));
+        }
+
+        public void refreshList()
+        {
+            listSource.Items.Clear();
+            FillListBox(listSource, @"prepare", FileExtensions);
+
+            listProcessed.Items.Clear();
+            FillListBox(listProcessed, @"output", FileExtensions);
         }
 
         private string[] LoadConfig(TextBox pythonPath)
@@ -119,7 +135,6 @@ namespace ColortexWPF
 
                 Thread.Sleep(200);
                 ExecutePython(pyPath, pyScript);
-
             }
         }
 
@@ -156,31 +171,37 @@ namespace ColortexWPF
         }
 
         private void ListSource_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {  
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.CacheOption = BitmapCacheOption.OnLoad;
-            image.UriSource = new Uri(@"prepare\" + listSource.SelectedItem.ToString(), UriKind.Relative);
-            image.EndInit();
-            imageRenderer.Source = image;           
+        {          
+            if (listSource.SelectedItem != null)
+            { 
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = new Uri(@"prepare\" + listSource.SelectedItem.ToString(), UriKind.Relative);
+                image.EndInit();
+                imageRenderer.Source = image;
+            }
+            listProcessed.UnselectAll();
         }
 
         private void ListProcessed_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.CacheOption = BitmapCacheOption.OnLoad;
-            image.UriSource = new Uri(@"output\" + listProcessed.SelectedItem.ToString(), UriKind.Relative);
-            image.EndInit();
-            imageRenderer.Source = image;
+            if (listProcessed.SelectedItem != null)
+            {
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = new Uri(@"output\" + listProcessed.SelectedItem.ToString(), UriKind.Relative);
+                image.EndInit();
+                imageRenderer.Source = image;
+            }
+            listSource.UnselectAll();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {            
             BitmapFrame bitmap = CreateResizedImage(imageRenderer.Source, (int)(imageRenderer.Source.Width / 1.2), (int)(imageRenderer.Source.Height / 1.2), 0);
-            
-            //BitmapImage image = new BitmapImage();
-            
+                        
             imageRenderer.Source = bitmap;
         }
     }
