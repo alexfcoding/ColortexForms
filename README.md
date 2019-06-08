@@ -5,9 +5,7 @@ Text-on-image rendering algorithm is based on python scripts with callings from 
 - Copy your images to **prepare** folder
 - Launch ColortexForms.exe
 - Set python interpretator path if needed (loads from **config.txt** file automatically)
-- Click "Save config" if you want to change python path for auto-launch
-- Select source image, click **Resize** button (if you want to lower resolution)
-- Click **Convert selected**, then **Refresh** button to show up files
+- Select source image, click **Resize** button multiple times (if you want to lower resolution)
 ## Folders:
 - **prepare** - source files. Accepted types: bmp, png, jpg and gif
 - **input** - temporary folder for python script working
