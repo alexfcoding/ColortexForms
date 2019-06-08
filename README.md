@@ -1,5 +1,5 @@
 # ColortexForms
-Improving original [Colortex](https://github.com/IgorZyktin/Colortex) python project by adding .NET desktop user interface for image editing.  
+Improving original [Colortex](https://github.com/IgorZyktin/Colortex) python project by adding WPF .NET desktop user interface for image editing.  
 Text-on-image rendering algorithm is based on python scripts with callings from C# code.
 ## Getting Started
 - Copy your images to **prepare** folder
