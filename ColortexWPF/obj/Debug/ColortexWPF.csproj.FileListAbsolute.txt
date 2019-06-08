@@ -1,0 +1,17 @@
+C:\Users\Александр\source\ColortexForms\ColortexWPF\bin\Debug\ColortexWPF.exe.config
+C:\Users\Александр\source\ColortexForms\ColortexWPF\bin\Debug\ColortexWPF.exe
+C:\Users\Александр\source\ColortexForms\ColortexWPF\bin\Debug\ColortexWPF.pdb
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.csprojAssemblyReference.cache
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\App.g.cs
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF_MarkupCompile.cache
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF_MarkupCompile.lref
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\MainWindow.baml
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.g.resources
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.Properties.Resources.resources
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.csproj.GenerateResource.cache
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.csproj.CoreCompileInputs.cache
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.exe
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\ColortexWPF.pdb
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\Simple Styles.baml
+C:\Users\Александр\source\ColortexForms\ColortexWPF\obj\Debug\App.baml
