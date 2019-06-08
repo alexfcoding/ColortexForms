@@ -14,7 +14,7 @@ Text-on-image rendering algorithm is based on python scripts with callings from 
 - **output** - converted files, saved as "png" or "gif"
 - **used** - source files that were previously processed
 ---
-![Demo Animation](/img/Preview.gif?raw=true)
+![Demo Animation](/img/preview.jpg?raw=true)
 ![Demo Animation](/img/1.jpg?raw=true)
 ![Demo Animation](/img/2.png?raw=true)
 ![Demo Animation](/img/3.png?raw=true)
