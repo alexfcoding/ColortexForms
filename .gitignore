@@ -345,3 +345,8 @@ healthchecksdb
 MigrationBackup/
 *.jpg
 *.png
+.vs/ColortexForms/v15/.suo
+.vs/ColortexForms/v15/Server/sqlite3/storage.ide-shm
+ColortexForms/bin/Debug/ColortexForms.pdb
+ColortexForms/obj/Debug/ColortexForms.csproj.GenerateResource.cache
+ColortexForms/obj/Debug/ColortexForms.pdb
