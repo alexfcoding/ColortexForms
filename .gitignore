@@ -343,8 +343,6 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
-*.jpg
-*.png
 .vs/ColortexForms/v15/.suo
 .vs/ColortexForms/v15/Server/sqlite3/storage.ide-shm
 ColortexForms/bin/Debug/ColortexForms.pdb
